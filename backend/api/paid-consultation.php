@@ -31,7 +31,7 @@ if ($errors !== []) {
     json_response(false, 'Please complete all required fields with valid information.', 422);
 }
 
-$companyEmail = env('COMPANY_EMAIL', 'info@hergerandco.com');
+$companyEmail = env('COMPANY_EMAIL', 'info@grandforthlegal.com');
 
 $safeName = e($name);
 $safeEmail = e($email);
@@ -71,8 +71,8 @@ Your estimated fee, based on the details you provided, was:</p>
 <p style="font-size:18px;font-weight:bold;">{$safeFeeSummary}</p>
 <p>This figure is an estimate only. Our billing team will confirm the final scope and
 fee in writing, and payment instructions will follow before your session is scheduled.</p>
-<p>Warm regards,<br/>Herger's &amp; Co.</p>
+<p>Warm regards,<br/>Grandforth Legal Practitioners</p>
 HTML;
-resend_send_email($email, 'Your paid consultation estimate — Herger\'s & Co.', $confirmationHtml);
+resend_send_email($email, 'Your paid consultation estimate — Grandforth Legal Practitioners', $confirmationHtml);
 
 json_response(true, 'Thank you — your request has been sent. Our billing team will confirm the final fee and next steps by email.');

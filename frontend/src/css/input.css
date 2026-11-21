@@ -45,7 +45,7 @@
     width: 3.25rem;
     height: 3.25rem;
   }
-  img[src$="logos.png"], img[src$="hergers-mark.svg"] {
+  img[src$="logos.png"], img[src$="grandforth-mark.svg"] {
     display: block;
     object-fit: contain;
     background: transparent;

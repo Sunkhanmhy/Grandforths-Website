@@ -43,8 +43,8 @@ if ($errors !== []) {
     json_response(false, 'Please complete all required fields, including the confidentiality acknowledgement.', 422);
 }
 
-$companyEmail = env('COMPANY_EMAIL', 'info@hergerandco.com');
-$calendlyUrl = env('CALENDLY_URL', 'https://calendly.com/hergerandco/free-consultation');
+$companyEmail = env('COMPANY_EMAIL', 'info@grandforthlegal.com');
+$calendlyUrl = env('CALENDLY_URL', 'https://calendly.com/grandforthlegal/free-consultation');
 
 $safeName = e($name);
 $safeEmail = e($email);
@@ -96,7 +96,7 @@ if (!$sent) {
 $confirmationHtml = <<<HTML
 <h2>Your free consultation request has been received</h2>
 <p>Dear {$safeName},</p>
-<p>Thank you for requesting a complimentary consultation with Herger's &amp; Co. regarding
+<p>Thank you for requesting a complimentary consultation with Grandforth Legal Practitioners regarding
 <strong>{$safePracticeArea}</strong>. A member of our team will contact you via your preferred
 method to confirm a convenient time.</p>
 <p>If you would prefer to book a slot directly on our live calendar instead, you may do so here:</p>
@@ -104,8 +104,8 @@ method to confirm a convenient time.</p>
 <p>Please note this initial consultation does not create an attorney-client relationship;
 this is only established once engagement terms have been confirmed in writing.</p>
 <p>We look forward to speaking with you.</p>
-<p>Warm regards,<br/>Herger's &amp; Co.</p>
+<p>Warm regards,<br/>Grandforth Legal Practitioners</p>
 HTML;
-resend_send_email($email, 'Your consultation request — Herger\'s & Co.', $confirmationHtml);
+resend_send_email($email, 'Your consultation request — Grandforth Legal Practitioners', $confirmationHtml);
 
 json_response(true, 'Thank you — your consultation request has been sent. Our team will contact you shortly to confirm a time, and a confirmation has been emailed to you.');

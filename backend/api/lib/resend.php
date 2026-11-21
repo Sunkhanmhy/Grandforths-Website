@@ -10,7 +10,7 @@ require_once __DIR__ . '/env.php';
 function resend_send_email(string $toEmail, string $subject, string $htmlBody, ?string $replyTo = null): array
 {
     $apiKey = env('RESEND_API_KEY');
-    $fromEmail = env('RESEND_FROM_EMAIL', 'Herger\'s & Co. Website <no-reply@notifications.hergerandco.com>');
+    $fromEmail = env('RESEND_FROM_EMAIL', 'Grandforth Legal Practitioners Website <no-reply@notifications.grandforthlegal.com>');
 
     if (filter_var($toEmail, FILTER_VALIDATE_EMAIL) === false) {
         error_log('[resend] Refusing to send: destination address "' . $toEmail . '" is not a valid email (check COMPANY_EMAIL).');

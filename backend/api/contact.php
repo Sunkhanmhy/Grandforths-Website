@@ -39,7 +39,7 @@ if ($errors !== []) {
     json_response(false, 'Please complete all required fields with valid information.', 422);
 }
 
-$companyEmail = env('COMPANY_EMAIL', 'info@hergerandco.com');
+$companyEmail = env('COMPANY_EMAIL', 'info@grandforthlegal.com');
 
 $safeName = e($name);
 $safeEmail = e($email);
@@ -81,11 +81,11 @@ if (!$sent) {
 $confirmationHtml = <<<HTML
 <h2>We've received your message</h2>
 <p>Dear {$safeName},</p>
-<p>Thank you for contacting Herger's &amp; Co. A member of our client relations team
+<p>Thank you for contacting Grandforth Legal Practitioners A member of our client relations team
 will respond within one business day. For urgent matters, please call our office
 directly during business hours.</p>
-<p>Warm regards,<br/>Herger's &amp; Co.</p>
+<p>Warm regards,<br/>Grandforth Legal Practitioners</p>
 HTML;
-resend_send_email($email, "We've received your message — Herger's & Co.", $confirmationHtml);
+resend_send_email($email, "We've received your message — Grandforth Legal Practitioners", $confirmationHtml);
 
 json_response(true, 'Thank you — your message has been sent. We will respond within one business day.');

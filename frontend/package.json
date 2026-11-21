@@ -1,8 +1,8 @@
 {
-  "name": "hergers-and-co",
+  "name": "grandforth-legal-practitioners",
   "version": "1.0.0",
   "private": true,
-  "description": "Herger's & Co. corporate law firm website",
+  "description": "Grandforth Legal Practitioners corporate law firm website",
   "scripts": {
     "build:css": "tailwindcss -i ./src/css/input.css -o ./assets/css/tailwind.css --minify",
     "watch:css": "tailwindcss -i ./src/css/input.css -o ./assets/css/tailwind.css --watch",

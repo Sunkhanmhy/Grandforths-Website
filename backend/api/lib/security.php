@@ -63,7 +63,7 @@ function is_valid_email(string $email): bool
 function enforce_rate_limit(string $bucket, int $maxAttempts = 5, int $windowSeconds = 600): void
 {
     $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
-    $dir = sys_get_temp_dir() . '/hergerandco_ratelimit';
+    $dir = sys_get_temp_dir() . '/grandforthlegal_ratelimit';
     if (!is_dir($dir)) {
         mkdir($dir, 0700, true);
     }
